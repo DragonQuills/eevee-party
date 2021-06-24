@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/connection_ii/ConnectionII.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/UI/MainMenu/MainMenu.gd" type="Script" id=2]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Main" type="Node" parent="."]
+
+[node name="Title" type="Label" parent="Main"]
+margin_left = 161.205
+margin_top = 259.739
+margin_right = 245.205
+margin_bottom = 273.739
+rect_scale = Vector2( 8, 8 )
+text = "Eevee's Party"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="Main"]
+margin_left = 385.0
+margin_top = 486.95
+margin_right = 472.0
+margin_bottom = 522.95
+rect_scale = Vector2( 2.26641, 2.50299 )
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpButton" type="Button" parent="Main"]
+margin_left = 385.065
+margin_top = 594.828
+margin_right = 472.065
+margin_bottom = 630.828
+rect_scale = Vector2( 2.26641, 2.50299 )
+custom_fonts/font = ExtResource( 1 )
+text = "Help"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="Main"]
+margin_left = 385.0
+margin_top = 705.702
+margin_right = 475.061
+margin_bottom = 741.702
+rect_scale = Vector2( 2.26641, 2.50299 )
+custom_fonts/font = ExtResource( 1 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Help" type="Node" parent="."]
+[connection signal="pressed" from="Main/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="Main/QuitButton" to="." method="_on_QuitButton_pressed"]

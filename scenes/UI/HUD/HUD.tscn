@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/connection_ii/ConnectionII.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/UI/HUD/HUD.gd" type="Script" id=2]
+
+[node name="In-Game_HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 338.507
+margin_top = 32.8193
+margin_right = 466.507
+margin_bottom = 93.8193
+rect_scale = Vector2( 2.21186, 1.70524 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverLabel" type="Label" parent="."]
+margin_left = 248.609
+margin_top = 425.376
+margin_right = 413.609
+margin_bottom = 486.376
+rect_scale = Vector2( 3.02345, 3.08712 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Game Over"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
