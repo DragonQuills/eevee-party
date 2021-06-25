@@ -1,2 +1,0 @@
-In the middle of tweakign speed to make the game more difficult over time
-I also need to tweak frate/sec on the animationf or eevee (esp siudeways) to make that also speed up over time since it looks awks
