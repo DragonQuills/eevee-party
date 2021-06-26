@@ -1,5 +1,7 @@
 # Eevee's Party
-A Snake clone made in Godot. Help Eevee collect lots of yummy food for their party!
+A Snake-like made in Godot. Help Eevee collect lots of yummy food for their party!
+
+This game is still **in-progress** and features are actively being developed. As such, the game may be buggy, have missing features, or crash unexpectedly. If you find anything funny, feel free to submit an issue and I'll get to it when I can!
 
 ## Credits
 ### Game Engine
