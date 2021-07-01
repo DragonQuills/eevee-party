@@ -16,6 +16,7 @@ wait_time = 0.001
 autostart = true
 
 [node name="TailContainer" type="Node" parent="."]
+
 [connection signal="area_entered" from="Head" to="." method="_on_Head_area_entered"]
 [connection signal="hit" from="Head" to="." method="_on_Head_hit"]
 [connection signal="timeout" from="MoveTimer" to="." method="_on_MoveTimer_timeout"]

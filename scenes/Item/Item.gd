@@ -4,13 +4,21 @@ extends Area2D
 func _ready():
 	pass
 
+onready var type
+
+
 func randomize_item_type(rng):
 	var rand_float = rng.randf()
-	# Special
-	if rand_float > 0.8:
+	if rand_float > 0.9:
+		type = "apple"
 		$ItemSprite.animation = "special"
-		$ItemSprite.frame = rng.randi_range(0, $ItemSprite.frames.get_frame_count("special") - 1)
+		$ItemSprite.frame = 0
+	elif rand_float >= 0.8 and rand_float < 0.9:
+		type = "grimy"
+		$ItemSprite.animation = "special"
+		$ItemSprite.frame = 1
 	else:
+		type = "normal"
 		$ItemSprite.animation = "normal"
 		$ItemSprite.frame = rng.randi_range(0, $ItemSprite.frames.get_frame_count("normal") - 1)
 		
@@ -21,9 +29,9 @@ func move(new_pos, tween, speed):
 	tween.start()
 
 func points():
-	if $ItemSprite.animation == "special" and $ItemSprite.frame == 0:
+	if type == "apple":
 		return 50
-	elif $ItemSprite.animation == "special" and $ItemSprite.frame == 1:
+	elif type == "grimy":
 		return -50
 	else:
 		return 20

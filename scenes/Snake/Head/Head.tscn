@@ -29,16 +29,6 @@ animations = [ {
 "name": "side",
 "speed": 9.0
 }, {
-"frames": [ ExtResource( 12 ) ],
-"loop": false,
-"name": "hurt_down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ) ],
-"loop": false,
-"name": "hurt_side",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": false,
 "name": "hurt_up",
@@ -48,6 +38,16 @@ animations = [ {
 "loop": false,
 "name": "down",
 "speed": 11.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": false,
+"name": "hurt_side",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": false,
+"name": "hurt_down",
+"speed": 5.0
 } ]
 
 [node name="Head" type="Area2D"]
@@ -69,4 +69,5 @@ animation = "hurt_down"
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 collide_with_areas = true
+
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
