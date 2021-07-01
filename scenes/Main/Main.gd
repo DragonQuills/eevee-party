@@ -6,6 +6,16 @@ var item_spawn_speed = 9/speed
 
 onready var Item = load("res://scenes/Item/Item.tscn")
 onready var Snake = load("res://scenes/Snake/Snake.tscn")
+onready var GameOverSound: AudioStream = load("res://assets/sound_effects/game_over.wav")
+onready var PickUpSound: AudioStream = load("res://assets/sound_effects/pick_up.wav")
+onready var GrimyPickUpSound: AudioStream = load("res://assets/sound_effects/grimy_pick_up.wav")
+onready var ApplePickUpSound: AudioStream = load("res://assets/sound_effects/apple_pick_up.wav")
+
+onready var item_sounds = {
+	"normal": PickUpSound,
+	"grimy": GrimyPickUpSound,
+	"apple": ApplePickUpSound
+}
 
 onready var items = []
 
@@ -67,6 +77,10 @@ func game_over():
 	$ItemSpawnTimer.stop()
 	$SpeedUpTimer.stop()
 	
+	$SoundEffects.stop()
+	$SoundEffects.stream = GameOverSound
+	$SoundEffects.play()
+	
 	yield(get_tree().create_timer(3), "timeout")
 	for item in items:
 		item.queue_free()
@@ -85,6 +99,9 @@ func _on_ItemSpawnTimer_timeout():
 
 func _on_Snake_item_collected(item):
 	$HUD.update_score(item.points())
+	
+	$SoundEffects.stream = item_sounds[item.item_type]
+	$SoundEffects.play()
 
 func _on_MainMenu_start():
 	start()
