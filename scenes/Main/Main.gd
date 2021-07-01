@@ -100,7 +100,7 @@ func _on_ItemSpawnTimer_timeout():
 func _on_Snake_item_collected(item):
 	$HUD.update_score(item.points())
 	
-	$SoundEffects.stream = item_sounds[item.item_type]
+	$SoundEffects.stream = item_sounds[item.type]
 	$SoundEffects.play()
 
 func _on_MainMenu_start():
