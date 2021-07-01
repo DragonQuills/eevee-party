@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/grimy_pick_up.wav-df3069d7c00aa0f7186f27cc5f45a6c6.sample"
+
+[deps]
+
+source_file="res://assets/sound_effects/grimy_pick_up.wav"
+dest_files=[ "res://.import/grimy_pick_up.wav-df3069d7c00aa0f7186f27cc5f45a6c6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/apple_pick_up.wav-83f0240d2ad40a1682b15783d21e33f7.sample"
+
+[deps]
+
+source_file="res://assets/sound_effects/apple_pick_up.wav"
+dest_files=[ "res://.import/apple_pick_up.wav-83f0240d2ad40a1682b15783d21e33f7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
