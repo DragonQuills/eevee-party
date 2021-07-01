@@ -83,8 +83,8 @@ func _on_ItemSpawnTimer_timeout():
 	spawn_item(get_spawn_position())
 	$ItemSpawnTimer.start(item_spawn_speed)
 
-func _on_Snake_item_collected(points):
-	$HUD.update_score(points)
+func _on_Snake_item_collected(item):
+	$HUD.update_score(item.points())
 
 func _on_MainMenu_start():
 	start()

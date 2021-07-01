@@ -5,7 +5,7 @@ export var tile_size = 24 * 2
 export onready var position: Vector2 = $Head.position
 
 signal hit
-signal item_collected(points)
+signal item_collected(item)
 
 onready var tween = $Tween
 
@@ -82,4 +82,4 @@ func _on_Head_hit():
 func _on_Head_area_entered(area):
 	if "Item" in area.name:
 		add_to_tail(area)
-		emit_signal("item_collected", area.points())
+		emit_signal("item_collected", area)
