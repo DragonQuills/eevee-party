@@ -1,0 +1,149 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Items/FoodSprites.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://scenes/UI/HowToPlay/HowToPlay.gd" type="Script" id=2]
+
+[node name="HowToPlay" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="FoodPoints" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Apple" type="AnimatedSprite" parent="FoodPoints"]
+position = Vector2( 330.79, 573.43 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "special"
+
+[node name="Gummis" type="Control" parent="FoodPoints"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gummi" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 168.222, 468.664 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+
+[node name="Gummi1" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 225.158, 468.664 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 1
+
+[node name="Gummi2" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 281.281, 468.664 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 2
+
+[node name="Gummi3" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 337.963, 468.664 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 3
+
+[node name="Gummi4" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 393.745, 468.664 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 5
+
+[node name="Gummi5" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 448.035, 468.664 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 7
+
+[node name="Gummi6" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 504.006, 468.664 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 8
+
+[node name="Grimy" type="AnimatedSprite" parent="FoodPoints"]
+position = Vector2( 330.79, 666.739 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "special"
+frame = 1
+
+[node name="PointValues" type="VBoxContainer" parent="FoodPoints"]
+margin_left = 613.982
+margin_top = 447.955
+margin_right = 661.982
+margin_bottom = 525.955
+rect_scale = Vector2( 3.50107, 3.25308 )
+custom_constants/separation = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gummi" type="Label" parent="FoodPoints/PointValues"]
+margin_right = 48.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+20 pts"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Apple" type="Label" parent="FoodPoints/PointValues"]
+margin_top = 32.0
+margin_right = 48.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+50 pts"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grimy" type="Label" parent="FoodPoints/PointValues"]
+margin_top = 64.0
+margin_right = 48.0
+margin_bottom = 78.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-50 pts"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowToPlay" type="Label" parent="."]
+margin_left = 166.806
+margin_top = 136.591
+margin_right = 388.806
+margin_bottom = 218.591
+rect_scale = Vector2( 2.9109, 3.19102 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Use the arrow keys to move. Collect food to get points. Don't hit the walls or your tail, or it's game over!"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="Button" parent="."]
+margin_left = 390.568
+margin_top = 785.283
+margin_right = 444.568
+margin_bottom = 805.283
+rect_scale = Vector2( 4.098, 4.24488 )
+text = "Return"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Return" to="." method="return_to_main"]
