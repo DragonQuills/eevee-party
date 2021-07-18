@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Items/FoodSprites.tres" type="SpriteFrames" id=1]
+
+[node name="HowToPlay" type="CanvasLayer"]
+
+[node name="FoodPoints" type="Node" parent="."]
+
+[node name="Apple" type="AnimatedSprite" parent="FoodPoints"]
+position = Vector2( 322.564, 639.964 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "special"
+
+[node name="Gummis" type="Node" parent="FoodPoints"]
+
+[node name="Gummi" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 159.996, 535.197 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+
+[node name="Gummi1" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 216.931, 535.197 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 1
+
+[node name="Gummi2" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 273.055, 535.197 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 2
+
+[node name="Gummi3" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 329.737, 535.197 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 3
+
+[node name="Gummi4" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 385.519, 535.197 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 5
+
+[node name="Gummi5" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 439.809, 535.197 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 7
+
+[node name="Gummi6" type="AnimatedSprite" parent="FoodPoints/Gummis"]
+position = Vector2( 495.78, 535.197 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "normal"
+frame = 8
+
+[node name="Grimy" type="AnimatedSprite" parent="FoodPoints"]
+position = Vector2( 322.564, 733.273 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+animation = "special"
+frame = 1
+
+[node name="Points Values" type="VBoxContainer" parent="FoodPoints"]
+margin_left = 605.755
+margin_top = 514.488
+margin_right = 653.755
+margin_bottom = 592.488
+rect_scale = Vector2( 3.50107, 3.25308 )
+custom_constants/separation = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gummi" type="Label" parent="FoodPoints/Points Values"]
+margin_right = 48.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+20 pts"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Apple" type="Label" parent="FoodPoints/Points Values"]
+margin_top = 32.0
+margin_right = 48.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+50 pts"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grimy" type="Label" parent="FoodPoints/Points Values"]
+margin_top = 64.0
+margin_right = 48.0
+margin_bottom = 78.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-50 pts"
+__meta__ = {
+"_edit_use_anchors_": false
+}
