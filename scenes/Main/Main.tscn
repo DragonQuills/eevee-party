@@ -37,6 +37,8 @@ wait_time = 3.0
 
 [node name="SoundEffects" type="AudioStreamPlayer" parent="."]
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
 [connection signal="timeout" from="ItemSpawnTimer" to="." method="_on_ItemSpawnTimer_timeout"]
 [connection signal="timeout" from="SpeedUpTimer" to="." method="_on_SpeedUpTimer_timeout"]
 [connection signal="start" from="MainMenu" to="." method="_on_MainMenu_start"]
