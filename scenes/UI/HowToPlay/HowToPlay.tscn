@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/Items/FoodSprites.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://scenes/UI/HowToPlay/HowToPlay.gd" type="Script" id=2]
 
 [node name="HowToPlay" type="CanvasLayer"]
+script = ExtResource( 2 )
 
-[node name="FoodPoints" type="Node" parent="."]
+[node name="FoodPoints" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Apple" type="AnimatedSprite" parent="FoodPoints"]
 position = Vector2( 320.79, 551.43 )
@@ -12,7 +19,12 @@ scale = Vector2( 4, 4 )
 frames = ExtResource( 1 )
 animation = "special"
 
-[node name="Gummis" type="Node" parent="FoodPoints"]
+[node name="Gummis" type="Control" parent="FoodPoints"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Gummi" type="AnimatedSprite" parent="FoodPoints/Gummis"]
 position = Vector2( 158.222, 446.664 )
@@ -69,7 +81,7 @@ frames = ExtResource( 1 )
 animation = "special"
 frame = 1
 
-[node name="Points Values" type="VBoxContainer" parent="FoodPoints"]
+[node name="PointValues" type="VBoxContainer" parent="FoodPoints"]
 margin_left = 603.982
 margin_top = 425.955
 margin_right = 651.982
@@ -80,7 +92,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Gummi" type="Label" parent="FoodPoints/Points Values"]
+[node name="Gummi" type="Label" parent="FoodPoints/PointValues"]
 margin_right = 48.0
 margin_bottom = 14.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -89,7 +101,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Apple" type="Label" parent="FoodPoints/Points Values"]
+[node name="Apple" type="Label" parent="FoodPoints/PointValues"]
 margin_top = 32.0
 margin_right = 48.0
 margin_bottom = 46.0
@@ -99,7 +111,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Grimy" type="Label" parent="FoodPoints/Points Values"]
+[node name="Grimy" type="Label" parent="FoodPoints/PointValues"]
 margin_top = 64.0
 margin_right = 48.0
 margin_bottom = 78.0
@@ -123,7 +135,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="Return" type="Button" parent="."]
 margin_left = 376.568
 margin_top = 819.283
 margin_right = 430.568
