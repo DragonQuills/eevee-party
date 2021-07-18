@@ -11,6 +11,9 @@ onready var PickUpSound: AudioStream = load("res://assets/sound_effects/pick_up.
 onready var GrimyPickUpSound: AudioStream = load("res://assets/sound_effects/grimy_pick_up.wav")
 onready var ApplePickUpSound: AudioStream = load("res://assets/sound_effects/apple_pick_up.wav")
 
+onready var MainMenuMusic: AudioStream = load("res://assets/music/main_menu.ogg")
+onready var GameplayMusic: AudioStream = load("res://assets/music/gameplay.ogg")
+
 onready var item_sounds = {
 	"normal": PickUpSound,
 	"grimy": GrimyPickUpSound,
@@ -23,6 +26,9 @@ var rng = RandomNumberGenerator.new()
 
 func _ready():
 	rng.randomize()
+	$Music.stream = MainMenuMusic
+	$Music.play()
+
 
 func get_distance(p1: Vector2, p2: Vector2):
 	return sqrt( pow((p2.x - p1.x), 2) + pow((p2.y - p1.y), 2) )
@@ -52,6 +58,8 @@ func get_spawn_position():
 	return spawn_position
 
 func start():
+	$Music.stream = GameplayMusic
+	$Music.play()
 	speed = 4
 	
 	var snake = Snake.instance()
@@ -77,6 +85,7 @@ func game_over():
 	$ItemSpawnTimer.stop()
 	$SpeedUpTimer.stop()
 	
+	$Music.stop()
 	$SoundEffects.stop()
 	$SoundEffects.stream = GameOverSound
 	$SoundEffects.play()
@@ -89,6 +98,8 @@ func game_over():
 	$HUD.reset_score()
 	$HUD.show_score(false)
 	$MainMenu.show_main()
+	$Music.stream = MainMenuMusic
+	$Music.play()
 
 func _on_Snake_hit():
 	game_over()
