@@ -17,3 +17,7 @@ All sprites are originally from Nintendo's Pokémon Mystery Dungeon: Explorers o
 - Regular Item Pickup Sound originally from Pokémon Mystery Dungeon: Red / Blue Rescue team. Found on [The Sounds Resource, ripped by Treevis121](https://www.sounds-resource.com/ds_dsi/pokemonmysterydungeonbluerescueteam/sound/1895/)
 -Apple Pickup Sound and Grimy Food Pickup Sound originally from Pokémon Mystery Dungeon: Red / Blue Rescue team. Found on [The Sounds Resource, ripped by Ivy and SuperFlomm](https://www.sounds-resource.com/game_boy_advance/pokemonmysterydungeonredrescueteam/sound/8844/)
 - Game Over Sound from Kenney's Game Assets 1
+
+### Music
+- Main screen music is "Flowing Rocks" from Kenney's Game Assets 1
+- Game-play music is "Farm Frolics" from Kenney's Game Assets 1
