@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/fonts/connection_ii/ConnectionII.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scenes/UI/MainMenu/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://scenes/UI/HowToPlay/HowToPlay.tscn" type="PackedScene" id=3]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -55,6 +56,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Help" type="Node" parent="."]
+[node name="HowToPlay" parent="." instance=ExtResource( 3 )]
+
+[node name="FoodPoints" parent="HowToPlay" index="0"]
+visible = false
+
+[node name="HowToPlay" parent="HowToPlay" index="1"]
+visible = false
+
+[node name="Return" parent="HowToPlay" index="2"]
+visible = false
+
 [connection signal="pressed" from="Main/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="Main/HelpButton" to="." method="_on_HelpButton_pressed"]
 [connection signal="pressed" from="Main/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="show_main" from="HowToPlay" to="." method="show_main"]
+
+[editable path="HowToPlay"]

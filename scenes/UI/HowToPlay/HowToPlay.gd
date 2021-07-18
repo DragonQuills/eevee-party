@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+signal show_main
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,3 +13,7 @@ func show_how_to_play(show: bool = true):
 			child.show()
 		else:
 			child.hide()
+
+func return_to_main():
+	show_how_to_play(false)
+	emit_signal("show_main")
