@@ -11,6 +11,7 @@ onready var tween = $Tween
 
 # Direction the player is facing
 var direction = "ui_down"
+var current_move_dir = Vector2.DOWN
 var speed = 1
 
 # Whether the player has just picked up an item
@@ -47,7 +48,7 @@ func _input(event):
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):
 			# Player isn't allowed to turn opposite direction
-			if inputs[dir] + inputs[direction] != Vector2.ZERO:
+			if inputs[dir] + current_move_dir != Vector2.ZERO:
 				direction = dir
 	
 func move_tail(head_pos):
@@ -75,6 +76,7 @@ func _on_MoveTimer_timeout():
 			just_picked_up = false
 		else:
 			move_tail(head_pos)
+			current_move_dir = inputs[direction]
 
 func _on_Head_hit():
 	emit_signal("hit")
