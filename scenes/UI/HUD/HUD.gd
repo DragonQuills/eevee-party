@@ -24,6 +24,7 @@ func update_score(pts):
 
 func reset_score():
 	score = 0
+	$ScoreLabel.text = str(score)
 
 func show_score(show: bool = true):
 	if show:
